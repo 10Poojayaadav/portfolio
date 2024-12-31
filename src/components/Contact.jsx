@@ -40,7 +40,7 @@ const Contact = () => {
   return (
     <div>
       <div
-        className="isolate bg-gray-600 px-5 py-16 sm:py-12 lg:px-4"
+        className="px-5 py-16 sm:py-12 lg:px-4"
         style={{
           backgroundImage: `url(${back})`,
           backgroundSize: "cover",

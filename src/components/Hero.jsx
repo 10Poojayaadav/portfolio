@@ -1,14 +1,134 @@
 import React from "react";
+import { useState } from "react";
 import HeroImage from "../assets/header-img.png";
 import { ReactTyped } from "react-typed";
-import background from "../assets/b4.png";
+import background from "../assets/b3.png";
+import { FaEnvelope, FaInstagram, FaLinkedin } from "react-icons/fa";
 
-const Hero = () => {
+const Hero = ({ scrollToSection }) => {
+  const [isSidebarOpen, setIsSidebarOpen] = useState(false);
+  const toggleSidebar = () => {
+    setIsSidebarOpen(!isSidebarOpen);
+  };
+
   return (
     <section
       style={{ backgroundImage: `url(${background})`, backgroundSize: "cover" }}
     >
-      <div className="container mx-auto">
+      <div className="container mx-auto px-10 py-10 ">
+        <div>
+          {!isSidebarOpen && (
+            <button
+            onClick={toggleSidebar}
+            className="p-2 bg-purple-700 text-white fixed top-4 left-4 z-50 rounded-md shadow-lg"
+            aria-label="Toggle Menu"
+          >
+            {/* Burger Icon */}
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              className="h-6 w-6"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+              strokeWidth="2"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                d="M4 6h16M4 12h16M4 18h16"
+              />
+            </svg>
+          </button>
+          )}
+          <div className="flex items-center space-x-3 fixed top-4 right-4 z-50">
+            <a href="mailto:poojadmyadav@gmail.com" target="_blank"><FaEnvelope className="w-7 h-7" /></a>
+            <FaInstagram className="w-7 h-7" />
+            <a href="https://www.linkedin.com/in/pooja-yadav-7b56ba233" target="_blank"><FaLinkedin className="w-7 h-7" /></a>
+            {/* <span className=" text-purple-700 font-bold text-lg animate-bounce">
+              Hi!
+            </span>
+            <span className="text-2xl animate-wave">👋</span> */}
+          </div>
+
+          {/* Sidebar */}
+          <div
+            className={`fixed top-0 left-0 h-full w-64 bg-gray-800 text-white shadow-xl transform transition-transform duration-300 ${
+              isSidebarOpen ? "translate-x-0" : "-translate-x-full"
+            }`}
+          >
+            {/* Close Button */}
+            <button
+              onClick={toggleSidebar}
+              className="absolute top-4 right-4 text-gray-300"
+              aria-label="Close Menu"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                className="h-6 w-6"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+                strokeWidth="2"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  d="M6 18L18 6M6 6l12 12"
+                />
+              </svg>
+            </button>
+
+            {/* Sidebar Links */}
+            <ul className="mt-16 space-y-4 px-6">
+              <li
+                className="cursor-pointer hover:text-blue-500 transition-colors"
+                onClick={() => {
+                  toggleSidebar(); // First function
+                  scrollToSection("home"); // Second function
+                }}
+              >
+                Home
+              </li>
+              <li
+                className="cursor-pointer hover:text-blue-500 transition-colors"
+                onClick={() => {
+                  toggleSidebar(); // First function
+                  scrollToSection("about"); // Second function
+                }}
+              >
+                About
+              </li>
+              <li
+                className="cursor-pointer hover:text-blue-500 transition-colors"
+                onClick={() => {
+                  toggleSidebar(); // First function
+                  scrollToSection("skills"); // Second function
+                }}
+              >
+                Skills
+              </li>
+              <li
+                className="cursor-pointer hover:text-blue-500 transition-colors"
+                onClick={() => {
+                  toggleSidebar(); // First function
+                  scrollToSection("projects"); // Second function
+                }}
+              >
+                Projects
+              </li>
+              <li
+                className="cursor-pointer hover:text-blue-500 transition-colors"
+                onClick={() => {
+                  toggleSidebar(); // First function
+                  scrollToSection("contact"); // Second function
+                }}
+              >
+                Contact
+              </li>
+            </ul>
+          </div>
+        </div>
+
         <div className="min-h-[600px] max-w-[90%] mx-auto flex flex-col md:flex-row items-center">
           <div className="w-full md:w-2/3">
             <div className="max-w-[700px]">
@@ -17,7 +137,12 @@ const Hero = () => {
                   Welcome to my Portfolio
                 </h4>
                 <div>
-                  <h1 className="text-2xl">Hi! I'm Pooja, I'm a</h1>
+                  <h1 className="text-4xl">
+                    Hi! I'm Pooja,
+                    <br />{" "}
+                  </h1>
+                  <h1 className="text-2xl">I'm a</h1>
+
                   <ReactTyped
                     strings={[
                       "BackEnd Developer",
@@ -53,7 +178,7 @@ const Hero = () => {
               <img
                 src={HeroImage}
                 alt=""
-                className="h-96 w-99 rounded-full shadow-lg"
+                className="h-96 w-99 rounded-full shadow-custom"
               />
             </div>
           </div>

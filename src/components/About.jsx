@@ -1,8 +1,11 @@
 import React from "react";
-import background from "../assets/b5.png"
+import background from "../assets/b5.png";
 const About = () => {
   return (
-    <section className="bg-slate-800" style={{ backgroundImage: `url(${background})`, backgroundSize: "cover", }}>
+    <section
+      className="bg-slate-800 px-10 py-10"
+      style={{ backgroundImage: `url(${background})`, backgroundSize: "cover" }}
+    >
       <div className="container mx-auto text-center py-10">
         <h2 className="text-4xl mb-4 font-bold">About Me</h2>
         <div className="max-w-[1140px] mx-auto mb-14">
@@ -21,22 +24,33 @@ const About = () => {
         </div>
         {/* Experiences */}
         <h2 className="text-3xl mb-5 font-bold">Experiences</h2>
-        <div className="max-w-[700px] mx-auto">
-          <div class="flex flex-col justify-center">
-            <div class="w-full px-2 sm:px-0">
-              <div class="relative text-gray-700 antialiased text-sm font-semibold">
-                <div class="hidden sm:block w-1 bg-purple-700 absolute h-full left-1/2 transform -translate-x-1/2"></div>
-                <div class="mt-6 sm:mt-0 sm:mb-12">
-                  <div class="flex flex-col sm:flex-row items-center">
-                    <div class="flex justify-start w-full mx-auto items-center">
-                      <div class="w-full sm:w-1/2 sm:pr-8">
+        <div className="max-w-[700px] mx-auto mb-16">
+          <div className="flex flex-col justify-center">
+            <div className="w-full px-2 sm:px-0">
+              <div className="relative text-gray-700 antialiased text-sm font-semibold">
+                <div className="hidden sm:block w-1 bg-purple-700 absolute h-full left-1/2 transform -translate-x-1/2"></div>
+                <div className="mt-6 sm:mt-0 sm:mb-12">
+                  <div className="flex flex-col sm:flex-row items-center">
+                    <div className="flex justify-start w-full mx-auto items-center">
+                      <div className="w-full sm:w-1/2 sm:pr-8">
                         <div>
-                          <div class="p-4 text-left bg-[#ffffff40] rounded shadow">
+                          <div className="p-4 text-left bg-[#ffffff40] rounded shadow">
                             <div className="flex justify-between gap-2">
                               <div>
-                                <p className="text-white text-lg leading-1">Singsys Pte. Ltd.</p>
+                                <p className="text-white text-lg leading-1">
+                                  Singsys Pte. Ltd.
+                                </p>
                                 <p className="text-gray-100 text-md">
                                   Software Engineer
+                                </p>
+                                <p className="text-gray-400 ">
+                                  A Software Engineer is a professional who
+                                  designs, develops, tests, and maintains
+                                  software applications and systems. They use
+                                  programming languages, algorithms, and
+                                  problem-solving skills to create reliable and
+                                  scalable solutions that meet user and business
+                                  needs. 
                                 </p>
                               </div>
                               <div className="text-right">
@@ -49,10 +63,10 @@ const About = () => {
                         </div>
                       </div>
                     </div>
-                    <div class="rounded-full bg-purple-700 border-white border-4 w-8 h-8 absolute left-1/2 -translate-y-4 sm:translate-y-0 transform -translate-x-1/2 flex items-center justify-center">
+                    <div className="rounded-full bg-purple-700 border-white border-4 w-8 h-8 absolute left-1/2 -translate-y-4 sm:translate-y-0 transform -translate-x-1/2 flex items-center justify-center">
                       <svg
                         xmlns="http://www.w3.org/2000/svg"
-                        class="h-5 w-5 text-white"
+                        className="h-5 w-5 text-white"
                         fill="none"
                         viewBox="0 0 24 24"
                         stroke="currentColor"
@@ -68,16 +82,25 @@ const About = () => {
                   </div>
                 </div>
 
-                <div class="mt-6 sm:mt-0 sm:mb-12">
-                  <div class="flex flex-col sm:flex-row items-center">
-                    <div class="flex justify-end w-full mx-auto items-center">
-                      <div class="w-full sm:w-1/2 sm:pl-8">
-                        <div class="p-4 text-left bg-[#ffffff40] rounded shadow">
+                <div className="mt-6 sm:mt-0 sm:mb-12">
+                  <div className="flex flex-col sm:flex-row items-center">
+                    <div className="flex justify-end w-full mx-auto items-center">
+                      <div className="w-full sm:w-1/2 sm:pl-8">
+                        <div className="p-4 text-left bg-[#ffffff40] rounded shadow">
                           <div className="flex justify-between gap-2">
                             <div>
-                              <p className="text-white text-lg leading-1">Ease My Room</p>
+                              <p className="text-white text-lg leading-1">
+                                Ease My Room
+                              </p>
                               <p className="text-gray-100 text-md">
                                 Software Engineer
+                              </p>
+                              <p className="text-gray-400">
+                              Software Engineers work across various
+                                  domains, including web development, mobile
+                                  applications, and system infrastructure,
+                                  ensuring efficiency, security, and innovation
+                                  in technology.
                               </p>
                             </div>
                             <div className="text-right">
@@ -89,10 +112,10 @@ const About = () => {
                         </div>
                       </div>
                     </div>
-                    <div class="rounded-full bg-purple-700 border-white border-4 w-8 h-8 absolute left-1/2 -translate-y-4 sm:translate-y-0 transform -translate-x-1/2 flex items-center justify-center">
+                    <div className="rounded-full bg-purple-700 border-white border-4 w-8 h-8 absolute left-1/2 -translate-y-4 sm:translate-y-0 transform -translate-x-1/2 flex items-center justify-center">
                       <svg
                         xmlns="http://www.w3.org/2000/svg"
-                        class="h-5 w-5 text-white"
+                        className="h-5 w-5 text-white"
                         fill="none"
                         viewBox="0 0 24 24"
                         stroke="currentColor"
@@ -115,21 +138,23 @@ const About = () => {
         {/* Education  */}
         <h2 className="text-3xl mb-5 font-bold mt-4">Education</h2>
         <div className="max-w-[700px] mx-auto">
-          <div class="flex flex-col justify-center">
-            <div class="w-full px-2 sm:px-0">
-              <div class="relative text-gray-700 antialiased text-sm font-semibold">
-                <div class="hidden sm:block w-1 bg-purple-700 absolute h-full left-1/2 transform -translate-x-1/2"></div>
-                <div class="mt-6 sm:mt-0 sm:mb-12">
-                  <div class="flex flex-col sm:flex-row items-center">
-                    <div class="flex justify-start w-full mx-auto items-center">
-                      <div class="w-full sm:w-1/2 sm:pr-8">
+          <div className="flex flex-col justify-center">
+            <div className="w-full px-2 sm:px-0">
+              <div className="relative text-gray-700 antialiased text-sm font-semibold">
+                <div className="hidden sm:block w-1 bg-purple-700 absolute h-full left-1/2 transform -translate-x-1/2"></div>
+                <div className="mt-6 sm:mt-0 sm:mb-12">
+                  <div className="flex flex-col sm:flex-row items-center">
+                    <div className="flex justify-start w-full mx-auto items-center">
+                      <div className="w-full sm:w-1/2 sm:pr-8">
                         <div>
-                          <div class="p-4 text-left bg-[#ffffff40] rounded shadow">
+                          <div className="p-4 text-left bg-[#ffffff40] rounded shadow">
                             <div className="flex justify-between gap-2">
                               <div>
-                                <p className="text-white text-lg leading-1">Bachalor's of Technology(CSE)</p>
+                                <p className="text-white text-lg leading-1">
+                                  Bachalor's of Technology(CSE)
+                                </p>
                                 <p className="text-gray-100 text-md">
-                                Goel institute of technology & management
+                                  Goel institute of technology & management
                                 </p>
                               </div>
                               <div className="text-right">
@@ -142,10 +167,10 @@ const About = () => {
                         </div>
                       </div>
                     </div>
-                    <div class="rounded-full bg-purple-700 border-white border-4 w-8 h-8 absolute left-1/2 -translate-y-4 sm:translate-y-0 transform -translate-x-1/2 flex items-center justify-center">
+                    <div className="rounded-full bg-purple-700 border-white border-4 w-8 h-8 absolute left-1/2 -translate-y-4 sm:translate-y-0 transform -translate-x-1/2 flex items-center justify-center">
                       <svg
                         xmlns="http://www.w3.org/2000/svg"
-                        class="h-5 w-5 text-white"
+                        className="h-5 w-5 text-white"
                         fill="none"
                         viewBox="0 0 24 24"
                         stroke="currentColor"
@@ -161,31 +186,33 @@ const About = () => {
                   </div>
                 </div>
 
-                <div class="mt-6 sm:mt-0 sm:mb-12">
-                  <div class="flex flex-col sm:flex-row items-center">
-                    <div class="flex justify-end w-full mx-auto items-center">
-                      <div class="w-full sm:w-1/2 sm:pl-8">
-                        <div class="p-4 text-left bg-[#ffffff40] rounded shadow">
+                <div className="mt-6 sm:mt-0 sm:mb-12">
+                  <div className="flex flex-col sm:flex-row items-center">
+                    <div className="flex justify-end w-full mx-auto items-center">
+                      <div className="w-full sm:w-1/2 sm:pl-8">
+                        <div className="p-4 text-left bg-[#ffffff40] rounded shadow">
                           <div className="flex justify-between gap-2">
                             <div>
-                              <p className="text-white text-lg leading-1">Diploma (IT)</p>
+                              <p className="text-white text-lg leading-1">
+                                Diploma (IT)
+                              </p>
                               <p className="text-gray-100 text-md">
                                 Government Polytechnic Lucknow
                               </p>
                             </div>
                             <div className="text-right">
                               <time className="text-sm text-gray-100 font-normal">
-                               2017-2020
+                                2017-2020
                               </time>
                             </div>
                           </div>
                         </div>
                       </div>
                     </div>
-                    <div class="rounded-full bg-purple-700 border-white border-4 w-8 h-8 absolute left-1/2 -translate-y-4 sm:translate-y-0 transform -translate-x-1/2 flex items-center justify-center">
+                    <div className="rounded-full bg-purple-700 border-white border-4 w-8 h-8 absolute left-1/2 -translate-y-4 sm:translate-y-0 transform -translate-x-1/2 flex items-center justify-center">
                       <svg
                         xmlns="http://www.w3.org/2000/svg"
-                        class="h-5 w-5 text-white"
+                        className="h-5 w-5 text-white"
                         fill="none"
                         viewBox="0 0 24 24"
                         stroke="currentColor"

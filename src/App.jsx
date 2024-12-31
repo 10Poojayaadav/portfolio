@@ -37,10 +37,10 @@ const App = () => {
   }
 
   return (
-    <main className='bg-slate-950 text-gray-100'>
-      <Header scrollToSection={scrollToSection} />
+    <main className='bg-slate-800 text-gray-100'>
+      {/* <Header scrollToSection={scrollToSection} /> */}
       <div ref={homeRef}>
-        <Hero />
+        <Hero scrollToSection={scrollToSection}/>
       </div>
       <div ref={aboutRef}>
         <About />
